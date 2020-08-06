@@ -18,7 +18,7 @@ class Signin extends Component {
   };
 
   onSubmitSignIn = () => {
-    fetch("http://localhost:3001/signin", {
+    fetch("https://fierce-peak-33836.herokuapp.com/signin", {
       method: "post",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({
@@ -32,7 +32,7 @@ class Signin extends Component {
           this.props.loadUser(user);
           this.props.onRouteChange("home");
         }
-      })
+      });
   };
 
   render() {

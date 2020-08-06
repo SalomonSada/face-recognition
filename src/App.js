@@ -80,7 +80,7 @@ class App extends Component {
 
   onSubmit = () => {
     this.setState({ imgUrl: this.state.input });
-    fetch("http://localhost:3001/imageurl", {
+    fetch("https://fierce-peak-33836.herokuapp.com/imageurl", {
       method: "post",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({
@@ -89,7 +89,7 @@ class App extends Component {
     })
       .then((response) => response.json())
       .then((response) => {
-        fetch("http://localhost:3001/image", {
+        fetch("https://fierce-peak-33836.herokuapp.com/image", {
           method: "put",
           headers: { "content-type": "application/json" },
           body: JSON.stringify({
